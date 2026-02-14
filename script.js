@@ -81,15 +81,24 @@ window.addEventListener('load', () => {
                 duration: 0.3
             });
         });
-
-        // Smooth page transition on click
-        button.addEventListener('click', () => {
-            gsap.to('body', {
-                opacity: 0,
-                duration: 1,
-                onComplete: () => {
-                    window.location.href = 'cause.html'; // Replace with the actual URL of the next page
-                }
-            });
-        });
+		
     });
+const playBtn = document.getElementById("playBtn");
+
+playBtn.addEventListener("click", () => {
+
+    // Tell next page to start music
+    localStorage.setItem("startMusic", "true");
+
+    gsap.to("body", {
+        opacity: 0,
+        duration: 1,
+        onComplete: () => {
+            window.location.href = "cause.html";
+        }
+    });
+
+});
+
+
+
