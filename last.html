@@ -358,6 +358,10 @@
         }
     </style>
 </head>
+<audio id="bgMusic" loop>
+    <source src="assets/audio/hbd.mp3" type="audio/mpeg">
+</audio>
+
 
 <body>
     <div class="magic-sparkles"></div>
@@ -403,6 +407,30 @@
         <p>You deserve all the joy in the world—keep shining and spreading your beautiful energy.✨</p>
         <a href="#" class="goodbye-btn">Until We Meet Again 💝</a>
     </section>
+	<script>
+window.addEventListener("load", function () {
+
+    const music = document.getElementById("bgMusic");
+
+    if (localStorage.getItem("musicPlaying") === "true") {
+
+        let savedTime = localStorage.getItem("musicTime");
+
+        if (savedTime) {
+            music.currentTime = savedTime;
+        }
+
+        music.play();
+
+        // Keep saving time
+        music.addEventListener("timeupdate", function () {
+            localStorage.setItem("musicTime", music.currentTime);
+        });
+    }
+
+});
+</script>
+
 </body>
 
 </html>
