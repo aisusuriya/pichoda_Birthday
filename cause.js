@@ -79,14 +79,23 @@ function displayNewReason() {
                     shuffleButton.textContent = "Enter Our Storylane 💫";
                     shuffleButton.classList.add('story-mode');
                     shuffleButton.addEventListener('click', () => {
-                        gsap.to('body', {
-                            opacity: 0,
-                            duration: 1,
-                            onComplete: () => {
-                                window.location.href = 'last.html'; // Replace with the actual URL of the next page
-                            }
-                        });
-                    });
+
+    const music = document.getElementById("bgMusic");
+
+    // Save current playing time
+    localStorage.setItem("musicTime", music.currentTime);
+    localStorage.setItem("musicPlaying", "true");
+
+    gsap.to('body', {
+        opacity: 0,
+        duration: 1,
+        onComplete: () => {
+            window.location.href = 'last.html';
+        }
+    });
+
+});
+
                 }
             });
         }
