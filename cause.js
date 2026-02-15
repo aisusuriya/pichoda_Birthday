@@ -65,7 +65,7 @@ function displayNewReason() {
         reasonsContainer.appendChild(card);
         
         // Update counter
-        reasonCounter.textContent = `Reason ${currentReasonIndex + 1} of ${reasons.length}`;
+        reasonCounter.textContent = `Open fast babes ${currentReasonIndex + 1} of ${reasons.length}`;
         
         currentReasonIndex++;
 
@@ -76,7 +76,7 @@ function displayNewReason() {
                 duration: 0.5,
                 ease: "elastic.out",
                 onComplete: () => {
-                    shuffleButton.textContent = "Enter Our Storylane 💫";
+                    shuffleButton.textContent = "Enter into our world babes 💫";
                     shuffleButton.classList.add('story-mode');
                     shuffleButton.addEventListener('click', () => {
                         gsap.to('body', {
