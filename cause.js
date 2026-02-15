@@ -1,22 +1,22 @@
  // Reasons database
  const reasons = [
     { 
-        text: "You’re such a kind and wonderful person, and I feel lucky to share such a good bond with you. 💖", 
+        text: "As I said eariler, You are the only boy who proved me that All boys are not same. 💖", 
         emoji: "🌟",
         gif: "gif1.gif"
     },
     { 
-        text: "May your day be filled with love, laughter, and endless joy. 🌸 ", 
+        text: "You are the only one that belongs to my morning, afternoon, evening and night. 🌸 ", 
         emoji: "💗",
         gif: "gif2.gif"
     },
     { 
-        text: "Wishing you success, happiness, and everything your heart desires. ✨ ", 
+        text: "This year I’m wishing you as your lover… and in the upcoming years, I hope to wish you as your wife✨ ", 
         emoji: "💕",
         gif: "gif1.gif"
     },
     { 
-        text: "Stay the amazing girl you are—always spreading positivity around. Have the happiest year ahead! 🥳 ", 
+        text: "I'm wishing you to get all the good things in your life and we both can build our life together🥳 ", 
         emoji: "🌟",
         gif: "gif2.gif"
     }
