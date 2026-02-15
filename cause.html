@@ -7,7 +7,29 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
     <link rel="stylesheet" href="./cause.css">
     <style>
-       
+       /* Center his image */
+        .his-photo {
+            text-align: center;
+            margin: 20px 0;
+        }
+
+        .his-photo img {
+            width: 250px;      /* Adjust size as needed */
+            height: auto;
+            border-radius: 15px; /* Rounded corners */
+            box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+            transition: transform 0.3s ease;
+        }
+
+        .his-photo img:hover {
+            transform: scale(1.05); /* Slight zoom on hover */
+        }
+
+        /* Optional: make button and text spacing nicer */
+        .shuffle-button {
+            display: block;
+            margin: 20px auto;
+        }
     </style>
 </head>
 <body>
@@ -20,6 +42,10 @@
     <div class="container">
         <h1>Happy Birthday Pichoda 💖</h1>
         
+    <!-- His image centered -->
+    <div class="his-photo">
+        <img src="./d3.jpg" alt="My Love">
+    </div>
         <div id="reasons-container"></div>
         
         <button class="shuffle-button">Some things are waiting for you babes, Please open 💕</button>
