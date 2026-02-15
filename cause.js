@@ -1,22 +1,22 @@
  // Reasons database
- const c = [
+ const reasons = [
     { 
-        text: "As I said eariler, You are the only boy who proved me that All boys are not same. 💖", 
+        text: "You’re such a kind and wonderful person, and I feel lucky to share such a good bond with you. 💖", 
         emoji: "🌟",
         gif: "gif1.gif"
     },
     { 
-        text: "You are the only one that belongs to my morning, afternoon, evening and night. 🌸 ", 
+        text: "May your day be filled with love, laughter, and endless joy. 🌸 ", 
         emoji: "💗",
         gif: "gif2.gif"
     },
     { 
-        text: "This year I’m wishing you as your lover… and in the upcoming years, I hope to wish you as your wife✨ ", 
+        text: "Wishing you success, happiness, and everything your heart desires. ✨ ", 
         emoji: "💕",
         gif: "gif1.gif"
     },
     { 
-        text: "I'm wishing you to get all the good things in your life and we both can build our life together🥳 ", 
+        text: "Stay the amazing person you are—always spreading positivity around. Have the happiest year ahead! 🥳 ", 
         emoji: "🌟",
         gif: "gif2.gif"
     }
@@ -65,7 +65,7 @@ function displayNewReason() {
         reasonsContainer.appendChild(card);
         
         // Update counter
-        reasonCounter.textContent = `Open fast babes ${currentReasonIndex + 1} of ${reasons.length}`;
+        reasonCounter.textContent = `Reason ${currentReasonIndex + 1} of ${reasons.length}`;
         
         currentReasonIndex++;
 
@@ -76,26 +76,17 @@ function displayNewReason() {
                 duration: 0.5,
                 ease: "elastic.out",
                 onComplete: () => {
-                    shuffleButton.textContent = "Enter into our world  babes💫";
+                    shuffleButton.textContent = "Enter Our Storylane 💫";
                     shuffleButton.classList.add('story-mode');
                     shuffleButton.addEventListener('click', () => {
-
-    const music = document.getElementById("bgMusic");
-
-    // Save current playing time
-    localStorage.setItem("musicTime", music.currentTime);
-    localStorage.setItem("musicPlaying", "true");
-
-    gsap.to('body', {
-        opacity: 0,
-        duration: 1,
-        onComplete: () => {
-            window.location.href = 'last.html';
-        }
-    });
-
-});
-
+                        gsap.to('body', {
+                            opacity: 0,
+                            duration: 1,
+                            onComplete: () => {
+                                window.location.href = 'last.html'; // Replace with the actual URL of the next page
+                            }
+                        });
+                    });
                 }
             });
         }
