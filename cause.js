@@ -1,5 +1,5 @@
  // Reasons database
- const reasons = [
+ const c = [
     { 
         text: "As I said eariler, You are the only boy who proved me that All boys are not same. 💖", 
         emoji: "🌟",
@@ -76,17 +76,26 @@ function displayNewReason() {
                 duration: 0.5,
                 ease: "elastic.out",
                 onComplete: () => {
-                    shuffleButton.textContent = "Enter into our world babes 💫";
+                    shuffleButton.textContent = "Enter into our world  babes💫";
                     shuffleButton.classList.add('story-mode');
                     shuffleButton.addEventListener('click', () => {
-                        gsap.to('body', {
-                            opacity: 0,
-                            duration: 1,
-                            onComplete: () => {
-                                window.location.href = 'last.html'; // Replace with the actual URL of the next page
-                            }
-                        });
-                    });
+
+    const music = document.getElementById("bgMusic");
+
+    // Save current playing time
+    localStorage.setItem("musicTime", music.currentTime);
+    localStorage.setItem("musicPlaying", "true");
+
+    gsap.to('body', {
+        opacity: 0,
+        duration: 1,
+        onComplete: () => {
+            window.location.href = 'last.html';
+        }
+    });
+
+});
+
                 }
             });
         }
